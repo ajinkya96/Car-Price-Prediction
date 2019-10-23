@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Car Price Prediction</title>
+  </head>
+  <body>
+    <form action="upload" method="post" enctype="multipart/form-data">
+        <h1 style="text-align:center; padding-top:20px; color:#074d87;">Car Price Prediction</h1>
+    <div style="padding: 20px 20px 20px 100px;">
+
+    <h3 "font-style:italic;">Car Specifications</h3>
+      <div class="row">
+        <div class="col">
+          <h5 style="color:#6e7478;">Item Condition: {{item_condition}}</h5>
+          <br></br>
+          <h5 style="color:#6e7478;">Brand: {{brand}}</h5>
+          <br></br>
+          <h5 style="color:#6e7478;">Mileage: {{mil}}</h5>
+          <br></br>
+          <h5 style="color:#6e7478;">Variant: {{variant}}</h5>
+          <br></br>
+          <h5 style="color:#6e7478;">Type: {{car_type}}</h5>
+          <br></br>
+          <h5 style="color:#6e7478;">Transmission: {{transmission}}</h5>
+          <br></br>
+          <h5 style="color:#6e7478;">Engine CC: {{engine_cc}}</h5>
+        </div>
+
+        <div class="col">
+          <h5 style="color:#6e7478;">Peak Power(Bhp): {{peak_power}}</h5>
+          <br></br>
+          <h5 style="color:#6e7478;">Fuel Type: {{fuel_type}}</h5>
+          <br></br>
+          <h5 style="color:#6e7478;">Height(mm): {{height}}</h5>
+          <br></br>
+          <h5 style="color:#6e7478;">Fuel Tank(litres): {{fuel_tank}}</h5>
+          <br></br>
+          <h5 style="color:#6e7478;">Front Brakes: {{front_brakes}}</h5>
+          <br></br>
+          <h5 style="color:#6e7478;">Rear Brakes: {{rear_brakes}}</h5>
+        </div>
+      </div>
+      <br></br>
+      <h3 font-style:"italic;">The predicted price of the car for the above specifications is: {{y}}</h3>
+    </div>
+  </form>
+  </body>
+</html>

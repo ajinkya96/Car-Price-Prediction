@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Car Price Prediction</title>
+  </head>
+  <body>
+    <form action="prediction" method="post" enctype="multipart/form-data">
+    <div style="padding: 20px 20px 20px 20px;">
+      <h1 style="text-align:center; color:#074d87;">Car Price Prediction</h1>
+	  </div>
+
+	<div style="padding: 20px 20px 20px 100px;">
+	<div class="row">
+		<div class="col">
+			<h5 style="color:#6e7478;">Item Condition</h5>
+			<select required name="condition">
+				<option value="">--Choose Item Condition--</option>
+				{% for con in item_condition %}
+				  <option value="{{con}}">{{con}}<br>
+				{% endfor %}
+			</select>
+
+			<br></br>
+			<h5 style="color:#6e7478;">Brand</h5>
+			<select required name="brand">
+				<option value="" name="brand">--Choose Brand--</option>
+				{% for brand in brand %}
+				  <option value="{{brand}}">{{brand}}<br>
+				{% endfor %}
+		   </select>
+				<br></br>
+			<h5 style="color:#6e7478;">Mileage</h5>
+      <select required name="mileage">
+        <option value="">--Choose Mileage Range--</option>
+        {% for mileage in mileage %}
+          <option value="{{mileage}}">{{mileage}}<br>
+        {% endfor %}
+       </select>
+					<br></br>
+			<h5 style="color:#6e7478;">Variant</h5>
+      <select required name="var">
+        <option value="">--Choose Variant--</option>
+        {% for variant in variant %}
+          <option value="{{variant}}">{{variant}}<br>
+        {% endfor %}
+       </select>
+					<br></br>
+
+			<h5 style="color:#6e7478;">Type</h5>
+      <select required name="type">
+        <option value="">--Choose Car Type--</option>
+        {% for type in car_type %}
+          <option value="{{type}}">{{type}}<br>
+        {% endfor %}
+       </select>
+					<br></br>
+
+			<h5 style="color:#6e7478;">Transmission</h5>
+      <select required name="trans">
+        <option value="">--Choose Transmission--</option>
+        {% for tran in transmission %}
+          <option value="{{tran}}">{{tran}}<br>
+        {% endfor %}
+       </select>
+					<br></br>
+
+			<h5 style="color:#6e7478;">Engine CC</h5>
+			<input type="number" name="engine" placeholder="Range:600-5500" width="20%" min="600" max="5500" required style="width:150px;">
+					<br></br>
+		</div>
+
+		<div class="col" >
+			<h5 style="color:#6e7478;">Peak Power(Bhp)</h5>
+			<input type="number" name="power" placeholder="Range:20-600" min="20" max="600" required style="width:150px;">
+					<br></br>
+
+			<h5 style="color:#6e7478;">Fuel Type</h5>
+			<select required name="fuel">
+				<option value="">--Choose Fuel Type--</option>
+				{% for fuel in fuel_type %}
+				  <option value="{{fuel}}">{{fuel}}<br>
+				{% endfor %}
+			</select>
+					<br></br>
+
+			<h5 style="color:#6e7478;">Height(mm)</h5>
+			<input type="number" name="height" placeholder="Range:1200-2000" width="5%" min="1200" max="2000" required style="width:150px;">
+					<br></br>
+
+			<h5 style="color:#6e7478;">Fuel Tank(litres)</h5>
+			<input type="number" name="tank" placeholder="Range:30-115" width="5%" min="30" max="115" required style="width:150px;">
+					<br></br>
+
+			<h5 style="color:#6e7478;">Front Brakes</h5>
+			<select required name="f_brakes">
+				<option value="">--Choose Brake type--</option>
+				{% for fbrakes in front_brakes %}
+				  <option value="{{fbrakes}}">{{fbrakes}}<br>
+				{% endfor %}
+			</select>
+					<br></br>
+
+			<h5 style="color:#6e7478;">Rear Brakes</h5>
+			<select required name="r_brakes">
+				<option value="">--Choose Brake type--</option>
+				{% for rbrakes in rear_brakes %}
+				  <option value="{{rbrakes}}">{{rbrakes}}<br>
+				{% endfor %}
+			</select>
+					<br></br>
+					<br></br>
+
+			<input type="Submit" value="Submit">
+		</div>
+	</div>
+    </div>
+	</form>
+  </body>
+</html>
